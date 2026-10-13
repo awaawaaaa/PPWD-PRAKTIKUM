@@ -18,6 +18,15 @@ jobs:
         env:
           WEBHOOK_KEY: ${{ secrets.AAPANEL_WEBHOOK_KEY }}
         run: |
-          curl -kfsS --retry 2 --retry-delay 3 \
-            -X POST \
-            "https://103.171.84.81:25181/hook?access_key=${WEBHOOK_KEY}"
+          if [ -z "$WEBHOOK_KEY" ]; then
+            echo "ERROR: AAPANEL_WEBHOOK_KEY belum terisi."
+            exit 1
+          fi
+
+          curl --globoff -kfsS \
+            --retry 2 \
+            --retry-delay 3 \
+            --request GET \
+            --get \
+            --data-urlencode "access_key=${WEBHOOK_KEY}" \
+            "https://103.171.84.81:25181/hook"

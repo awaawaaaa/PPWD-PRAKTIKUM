@@ -23,10 +23,18 @@ jobs:
             exit 1
           fi
 
-          curl --globoff -kfsS \
-            --retry 2 \
-            --retry-delay 3 \
-            --request GET \
+          HTTP_CODE=$(curl --globoff -k -sS \
+            --output /tmp/webhook-response.txt \
+            --write-out "%{http_code}" \
             --get \
             --data-urlencode "access_key=${WEBHOOK_KEY}" \
-            "https://103.171.84.81:25181/hook"
+            "https://103.171.84.81:25181/hook")
+
+          echo "HTTP status: $HTTP_CODE"
+          echo "Webhook response:"
+          cat /tmp/webhook-response.txt
+
+          case "$HTTP_CODE" in
+            2*) echo "Webhook request diterima." ;;
+            *) echo "Webhook gagal dengan HTTP $HTTP_CODE."; exit 1 ;;
+          esac

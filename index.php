@@ -1,8 +1,7 @@
 
 <?php
 $folder = __DIR__;
-
-$pertemuan = glob($folder . '/pertemuan*', GLOB_ONLYDIR);
+$pertemuan = glob($folder . '/Pertemuan *', GLOB_ONLYDIR);
 ?>
 
 <!DOCTYPE html>
@@ -14,15 +13,19 @@ $pertemuan = glob($folder . '/pertemuan*', GLOB_ONLYDIR);
 
     <h1>Daftar Pertemuan Praktikum</h1>
 
-    <ul>
-        <?php foreach ($pertemuan as $p): ?>
-            <li>
-                <a href="<?= basename($p) ?>/">
-                    <?= ucfirst(basename($p)) ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+    <?php if (empty($pertemuan)): ?>
+        <p>Folder pertemuan tidak ditemukan!</p>
+    <?php else: ?>
+        <ul>
+            <?php foreach ($pertemuan as $p): ?>
+                <li>
+                    <a href="<?= rawurlencode(basename($p)) ?>/">
+                        <?= basename($p) ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
 
 </body>
 </html>

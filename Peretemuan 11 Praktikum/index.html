@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fresh Flower Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="site-header">
+    <nav class="navbar container">
+
+        <a href="#home" class="brand">
+            <span>✿</span> After<span>Bloom.</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="active">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#story">Our Story</a>
+            <a href="#order">Custom Order</a>
+        </div>
+
+        <a href="#order" class="nav-cta">Order a bouquet ↗</a>
+
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO SECTION -->
+    <section class="hero container" id="home">
+
+        <div class="hero-copy">
+
+            <p class="eyebrow">✿ A LITTLE LOVE, IN BLOOM</p>
+
+            <h1>
+            the hearts that need a <br>
+                reason to <em>bloom</em> again.
+            </h1>
+
+            <p class="hero-desc">
+                We believe little things can make a big difference. 
+                A flower to brighten your day, warm your heart, or remind someone that life is still beautiful.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#collection" class="button button-primary">
+                    Explore bouquets →
+                </a>
+
+                <a href="#story" class="text-link">
+                    Meet our florists ↗
+                </a>
+
+            </div>
+
+            <div class="hero-note">
+
+                <div class="avatar-stack">
+                    <span>🌷</span>
+                    <span>🌼</span>
+                    <span>🌸</span>
+                </div>
+
+                <div>
+                    <strong>Made fresh, just for you</strong>
+                    <small>Handpicked blooms every day</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-art">
+
+            <div class="art-blob"></div>
+
+            <div class="hero-image-wrap">
+                <img
+                    src="foto.jpg"
+
+            </div>
+
+            <div class="floating-card card-top">
+                <span class="flower-icon">✿</span>
+                <div>
+                    <strong>100% fresh</strong>
+                    <small>Always in bloom</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-bottom">
+                <span class="heart">♡</span>
+                <div>
+                    <strong>Made with love</strong>
+                    <small>Wrapped just for you</small>
+                </div>
+            </div>
+
+            <span class="sparkle sparkle-one">✦</span>
+            <span class="sparkle sparkle-two">✧</span>
+
+        </div>
+
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+
+        <div class="container benefit-grid">
+
+            <div>
+                <span class="benefit-icon">✿</span>
+                <p>
+                    <strong>Fresh every day</strong>
+                    <small>Flowers picked with care</small>
+                </p>
+            </div>
+
+            <div>
+                <span class="benefit-icon">♡</span>
+                <p>
+                    <strong>Thoughtful wrapping</strong>
+                    <small>Pretty from every angle</small>
+                </p>
+            </div>
+
+            <div>
+                <span class="benefit-icon">➜</span>
+                <p>
+                    <strong>Same-day delivery</strong>
+                    <small>For orders before 12 PM</small>
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FLOWER COLLECTION -->
+    <section class="collection section-space container" id="collection">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">THE FLOWER EDIT</p>
+                <h2>
+                    Find your kind<br>
+                    of <em>flower joy.</em>
+                </h2>
+            </div>
+
+            <p>
+                Setiap rangkaian bunga punya cerita. Pilih bunga yang paling
+                cocok untuk menyampaikan perasaanmu.
+            </p>
+
+        </div>
+
+        <!-- NAVIGASI TAB -->
+        <div class="tabs" role="tablist" aria-label="Kategori bunga">
+
+            <button
+                class="tab-button active"
+                data-category="all"
+                role="tab"
+                aria-selected="true">
+                All blooms
+            </button>
+
+            <button
+                class="tab-button"
+                data-category="romantic"
+                role="tab"
+                aria-selected="false">
+                Romantic
+            </button>
+
+            <button
+                class="tab-button"
+                data-category="cheerful"
+                role="tab"
+                aria-selected="false">
+                Cheerful
+            </button>
+
+            <button
+                class="tab-button"
+                data-category="minimal"
+                role="tab"
+                aria-selected="false">
+                Minimal
+            </button>
+
+        </div>
+
+        <!-- SEMUA PRODUK BUNGA -->
+        <div class="product-grid">
+
+            <!-- ROMANTIC 1 -->
+            <article class="product-card" data-category="romantic">
+
+                <div class="product-image pink-bg">
+                    <span class="product-tag">BESTSELLER</span>
+
+                    <img
+                        src="https://i.pinimg.com/736x/9e/a8/4d/9ea84dc513c15d0a978ce08834188ba4.jpg"
+                        alt="Gerbera Daisy"
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Garbera Daisy</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp12.000/tangkai</strong>
+                </div>
+
+                <button class="quick-order" data-product="Rosy Blush">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- ROMANTIC 2 -->
+            <article class="product-card" data-category="romantic">
+
+                <div class="product-image pink-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/b6/c5/ea/b6c5ea03d2622d00998d1569f6a94e37.jpg"
+                        alt="Buket bunga romantis"
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Sunflower</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp15.000/tangkai</strong>
+                </div>
+
+                <button class="quick-order" data-product="Sweet Love">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- ROMANTIC 3 -->
+            <article class="product-card" data-category="romantic">
+
+                <div class="product-image pink-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/5b/87/44/5b8744b0b703aaf75680d24875ff8dc5.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Tulip</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp20.000/tangkai</strong>
+                </div>
+
+                <button class="quick-order" data-product="Pink Dream">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- CHEERFUL 1 -->
+            <article class="product-card" data-category="cheerful">
+
+                <div class="product-image blue-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/e0/33/2e/e0332ea586197496e9b38d79b81af65b.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Peony</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp35.000/tangkai</strong>
+                </div>
+
+                <button class="quick-order" data-product="Sunny Side">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- CHEERFUL 2 -->
+            <article class="product-card" data-category="cheerful">
+
+                <div class="product-image blue-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/09/b3/61/09b361953281dd95500be2ee622f260c.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Rose</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp12.000/tangkai</strong>
+                </div>
+
+                <button class="quick-order" data-product="Happy Days">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- CHEERFUL 3 -->
+            <article class="product-card" data-category="cheerful">
+
+                <div class="product-image blue-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/ad/a0/1e/ada01ecc766b978ba048a4dbe36305c3.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Orchid</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp15.000/tangkai</strong>
+                </div>
+
+                <button class="quick-order" data-product="Bloom Party">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- MINIMAL 1 -->
+            <article class="product-card" data-category="minimal">
+
+                <div class="product-image lilac-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/a6/c2/97/a6c297527e35294ef45a16aa2b5396b4.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Baby’s Breath</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp10.000</strong>
+                </div>
+
+                <button class="quick-order" data-product="Cloud Nine">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- MINIMAL 2 -->
+            <article class="product-card" data-category="minimal">
+
+                <div class="product-image lilac-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/35/47/4d/35474d1e65e1e790d15f629e0ac5f37f.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Anthurium</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp20.000</strong>
+                </div>
+
+                <button class="quick-order" data-product="Pure Grace">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+            <!-- MINIMAL 3 -->
+            <article class="product-card" data-category="minimal">
+
+                <div class="product-image lilac-bg">
+                    <img
+                        src="https://i.pinimg.com/736x/d9/1d/ff/d91dff56abd7640b415d89610acc7217.jpg"
+                        alt=""
+                        loading="lazy">
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Calla Lily</h3>
+                        <p>-</p>
+                    </div>
+                    <strong>Rp20.000</strong>
+                </div>
+
+                <button class="quick-order" data-product="Soft Serenity">
+                    Choose bouquet <span>↗</span>
+                </button>
+
+            </article>
+
+        </div>
+
+        <p class="tab-hint" id="tabHint">
+            Showing all of our favorite blooms ✿
+        </p>
+
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section" id="story">
+
+        <div class="container story-grid">
+
+            <div class="story-photo">
+                <img
+                    src="https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=1000&q=85"
+                    alt="Bunga yang dirangkai florist"
+                    loading="lazy">
+
+                <span class="photo-caption">
+                    A little joy, wrapped by hand ♡
+                </span>
+            </div>
+
+            <div class="story-copy">
+
+                <p class="eyebrow">A NOTE FROM OUR STUDIO</p>
+
+                <h2>
+                    Flowers are our<br>
+                    favorite way to say <em>"I care."</em>
+                </h2>
+
+                <p>
+                    Di AfterBloom kami percaya bahwa bunga adalah cara sederhana untuk hadir,
+                    mengucapkan terima kasih, meminta maaf, atau
+                    membuat hari biasa terasa spesial.
+                </p>
+
+                <p>
+                    Setiap buket dirangkai dengan penuh perhatian
+                    dan detail kecil yang dibuat khusus untuk
+                    orang yang kamu sayangi.
+                </p>
+
+                <a href="#order" class="button button-secondary">
+                    Make it personal →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CUSTOM ORDER FORM -->
+    <section class="order-section section-space container" id="order">
+
+        <div class="order-intro">
+
+            <p class="eyebrow">YOUR FLOWERS, REMIND SOMEONE THAT LIFE IS STILL BEAUTIFUL</p>
+
+            <h2>
+                Let's make a<br>
+                <em>special bouquet.</em>
+            </h2>
+
+            <p>
+                Punya warna, pesan, atau momen spesial?
+                Ceritakan sedikit, biar kami bantu merangkainya.
+            </p>
+
+            <div class="order-sticker">
+                ✿ <span>made<br>for you</span>
+            </div>
+
+        </div>
+
+        <div class="form-card">
+
+            <div class="form-title">
+                <div>
+                    <h3>Custom bouquet order</h3>
+                    <p>Isi detail pesananmu di bawah ini.</p>
+                </div>
+
+                <span class="form-flower">✿</span>
+            </div>
+
+            <form id="orderForm" novalidate>
+
+                <div class="form-row">
+
+                    <div class="field">
+                        <label for="fullName">Nama lengkap *</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Nama kamu">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="nama@email.com">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="field">
+                        <label for="phone">Nomor WhatsApp *</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="08xxxxxxxxxx">
+                    </div>
+
+                    <div class="field">
+                        <label for="bouquet">Pilihan buket *</label>
+                        <select id="bouquet" name="bouquet">
+                            <option value="">Pilih buket</option>
+                            <option value="Garbera Daisy">Garbera Daisy</option>
+                            <option value="Sunflower">Sunflower</option>
+                            <option value="Tulip">Tulip</option>
+                            <option value="Peony">Peony</option>
+                            <option value="Rose">Rose</option>
+                            <option value="Orchid">Orchid</option>
+                            <option value="Baby's Breath">Baby's Breath</option>
+                            <option value="Pure Grace">Anthurium</option>
+                            <option value="Soft Serenity">Calla Lily</option>
+                            <option value="Custom Mix">Custom Mix</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="field">
+                        <label for="deliveryDate">
+                            Tanggal pengiriman *
+                        </label>
+                        <input
+                            type="date"
+                            id="deliveryDate"
+                            name="deliveryDate">
+                    </div>
+
+                    <div class="field">
+                        <label for="budget">Budget *</label>
+                        <select id="budget" name="budget">
+                            <option value="">Pilih budget</option>
+                            <option value="under150">Di bawah Rp50.000</option>
+                            <option value="150-250">Rp50.000–Rp150.000</option>
+                            <option value="250-400">Rp150.000–Rp300.000</option>
+                            <option value="above400">Di atas Rp300.000</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label for="address">Alamat pengiriman *</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        placeholder="Jalan, nomor rumah, dan patokan">
+                </div>
+
+                <div class="field">
+                    <label for="message">
+                        Pesan kartu / request khusus
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="3"
+                        placeholder="Tulis pesan manis atau warna bunga yang kamu mau..."></textarea>
+                </div>
+
+                <label class="check-line">
+                    <input
+                        type="checkbox"
+                        id="agree"
+                        name="agree"
+                        value="yes">
+
+                    <span>
+                        Saya sudah memastikan detail pesanan benar.
+                    </span>
+                </label>
+
+                <button type="submit" class="button button-primary submit-button">
+                    Send my flower request 
+                </button>
+
+                <p class="form-footnote">
+                    * Wajib diisi. Kami akan menghubungi kamu via WhatsApp untuk konfirmasi pesanan.
+                </p>
+
+                <div
+                    class="success-message"
+                    id="successMessage"
+                    role="status">
+
+                    Yay! Detail pesananmu valid. AfterBloom
+                    siap merangkai kebahagiaan ✿
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <a class="brand" href="#home">
+            ✿ After<span>Bloom</span>
+        </a>
+
+        <p>Little blooms, big feelings.</p>
+
+        <p>© 2026 AfterBloom Studio</p>
+
+    </div>
+
+</footer>
+
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- JQUERY VALIDATION PLUGIN -->
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
+
+<!-- JAVASCRIPT SENDIRI -->
+<script src="main.js"></script>
+
+</body>
+</html>
+

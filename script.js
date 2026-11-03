@@ -1,49 +1,55 @@
-// ===== 1. Mode gelap / terang =====
 
-// Ambil tombol dari HTML berdasarkan ID-nya
+// MODE GELAP
+
 const tombolTema = document.getElementById("tombol-tema");
 
-// Saat tombol diklik, tambah/hapus class "gelap" pada <body>
+// Memeriksa tema yang tersimpan
+if (localStorage.getItem("tema") === "gelap") {
+    document.body.classList.add("gelap");
+    tombolTema.textContent = "☀️ Mode Terang";
+}
+
+// Mengubah tema
 tombolTema.addEventListener("click", function () {
+
     document.body.classList.toggle("gelap");
 
-    // Ubah tulisan tombol sesuai mode yang sedang aktif
     if (document.body.classList.contains("gelap")) {
-        tombolTema.textContent = "Mode terang";
+        tombolTema.textContent = "☀️ Mode Terang";
+        localStorage.setItem("tema", "gelap");
     } else {
-        tombolTema.textContent = "Mode gelap";
+        tombolTema.textContent = "🌙 Mode Gelap";
+        localStorage.setItem("tema", "terang");
     }
+
 });
 
 
-// ===== 2. Pencarian proyek =====
+// PENCARIAN PROYEK
 
-// Ambil elemen HTML yang dibutuhkan
-const kotakCari = document.getElementById("cari");
-const semuaKartu = document.querySelectorAll(".kartu");
+const inputCari = document.getElementById("cari");
+const kartuProyek = document.querySelectorAll(".kartu");
 const pesanKosong = document.getElementById("pesan-kosong");
 
-// Dijalankan setiap kali pengguna mengetik di kotak pencarian
-kotakCari.addEventListener("input", function () {
-    const kataKunci = kotakCari.value.toLowerCase();
-    let adaYangCocok = false;
+inputCari.addEventListener("input", function () {
 
-    // Periksa kartu satu per satu
-    semuaKartu.forEach(function (kartu) {
-        const isiKartu = kartu.textContent.toLowerCase();
+    const kataKunci = inputCari.value.toLowerCase().trim();
+    let ditemukan = 0;
 
-        if (isiKartu.includes(kataKunci)) {
-            kartu.style.display = "block"; // Tampilkan kartu
-            adaYangCocok = true;
+    kartuProyek.forEach(function (kartu) {
+
+        const namaProyek = kartu.textContent.toLowerCase();
+
+        if (namaProyek.includes(kataKunci)) {
+            kartu.style.display = "flex";
+            ditemukan++;
         } else {
-            kartu.style.display = "none"; // Sembunyikan kartu
+            kartu.style.display = "none";
         }
+
     });
 
-    // Tampilkan pesan jika tidak ada kartu yang cocok
-    if (adaYangCocok) {
-        pesanKosong.style.display = "none";
-    } else {
-        pesanKosong.style.display = "block";
-    }
+    pesanKosong.style.display =
+        ditemukan === 0 ? "block" : "none";
+
 });

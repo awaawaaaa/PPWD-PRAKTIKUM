@@ -4,61 +4,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Pertemuan Praktikum</title>
+
+    <title>PPWD Praktikum</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background: #f5f5f5;
-            color: #333;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f7fb;
+            color: #263445;
         }
 
-        h1 {
-            color: #333;
+        /* HEADER */
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
 
-        .container {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            max-width: 600px;
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #176b55;
         }
 
-        ul {
-            line-height: 2;
+        .logo span {
+            color: #f2a93b;
         }
 
-        a {
-            color: #2563eb;
+        nav a {
             text-decoration: none;
+            color: #526273;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 600;
         }
 
-        a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            color: #176b55;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #176b55, #239879);
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #e0f5ed;
+            line-height: 1.7;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #f2b544;
+            color: #263445;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #ffd16b;
+            transform: translateY(-3px);
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1100px;
+            margin: 55px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            margin-bottom: 10px;
+            font-size: 27px;
+            color: #176b55;
+        }
+
+        .section-description {
+            color: #84909d;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* CARD GRID */
+        .meeting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .meeting-card {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e8edf2;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(23,107,85,0.12);
+            border-color: #239879;
+        }
+
+        .folder-icon {
+            width: 55px;
+            height: 55px;
+            background: #e4f5ee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 13px;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .meeting-card h3 {
+            color: #263f36;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .meeting-card p {
+            color: #89939e;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .open-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #176b55;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #173e35;
+            color: #d5e7df;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 80px;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header {
+                padding: 18px 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 55px 20px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .container {
+                margin: 40px auto;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Daftar Pertemuan Praktikum</h1>
 
-        <ul>
-            <!-- Ganti nama folder sesuai repository kamu -->
-            <li><a href="Pertemuan 1/">Pertemuan 1</a></li>
-            <li><a href="Pertemuan 2/">Pertemuan 2</a></li>
-            <li><a href="Pertemuan 3/">Pertemuan 3</a></li>
-            <li><a href="Pertemuan 4/">Pertemuan 4</a></li>
-            <li><a href="Pertemuan 5/">Pertemuan 5</a></li>
-            <li><a href="Pertemuan 6/">Pertemuan 6</a></li>
-            <li><a href="Pertemuan 7/">Pertemuan 7</a></li>
-            <li><a href="Pertemuan 8/">Pertemuan 8</a></li>
-            <li><a href="Pertemuan 9/">Pertemuan 9</a></li>
-            <li><a href="Pertemuan 10/">Pertemuan 10</a></li>
-            <li><a href="Pertemuan 11/">Pertemuan 11</a></li>
-        </ul>
-    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            PPWD<span>.</span>
+        </div>
+
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#pertemuan">Pertemuan</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Welcome to PPWD Praktikum!</h1>
+
+        <p>
+            Selamat datang di dokumentasi praktikum
+            Pemrograman dan Pengembangan Web Dasar.
+            <br>
+            Jelajahi seluruh hasil praktikum melalui halaman ini.
+        </p>
+
+        <a href="#pertemuan" class="btn">
+            Lihat Pertemuan
+        </a>
+    </section>
+
+    <!-- DAFTAR PERTEMUAN -->
+    <main class="container" id="pertemuan">
+
+        <h2 class="section-title">
+            Daftar Pertemuan
+        </h2>
+
+        <p class="section-description">
+            Pilih salah satu folder untuk melihat hasil
+            praktikum pada setiap pertemuan.
+        </p>
+
+        <div class="meeting-grid">
+
+            <!-- PERTEMUAN 10 -->
+            <a href="./Pertemuan%2010/" class="meeting-card">
+                <div class="folder-icon">📁</div>
+
+                <h3>Pertemuan 10</h3>
+
+                <p>
+                    Kumpulan tugas dan hasil praktikum
+                    pertemuan 10.
+                </p>
+
+                <span class="open-link">
+                    Buka Folder →
+                </span>
+            </a>
+
+            <!-- PERTEMUAN 11 PRAKTIKUM -->
+            <a href="./Pertemuan%2011%20Praktikum/" class="meeting-card">
+                <div class="folder-icon">📁</div>
+
+                <h3>Pertemuan 11 Praktikum</h3>
+
+                <p>
+                    Kumpulan tugas dan hasil praktikum
+                    pertemuan 11.
+                </p>
+
+                <span class="open-link">
+                    Buka Folder →
+                </span>
+            </a>
+
+            <!-- PERTEMUAN 11 KEDAI KOPI -->
+            <a href="./Pertemuan%2011%20kedai%20kopi/" class="meeting-card">
+                <div class="folder-icon">☕</div>
+
+                <h3>Pertemuan 11 Kedai Kopi</h3>
+
+                <p>
+                    Project website kedai kopi menggunakan
+                    HTML, CSS, dan JavaScript.
+                </p>
+
+                <span class="open-link">
+                    Buka Folder →
+                </span>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 PPWD Praktikum |
+            Pemrograman dan Pengembangan Web Dasar
+        </p>
+    </footer>
+
 </body>
 </html>
-

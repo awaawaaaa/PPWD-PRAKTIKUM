@@ -1,0 +1,255 @@
+
+/* ===== 1. Warna ===== */
+/* Ubah warna cukup di bagian ini */
+
+:root {
+    --latar: #fff5f7;
+    --kartu: #ffffff;
+    --teks: #49363d;
+    --teks-pudar: #927780;
+    --aksen: #d9829b;
+    --aksen-gelap: #bd6681;
+    --border: #f1d6df;
+    --footer: #f8e2e9;
+}
+
+/* Warna saat mode gelap aktif */
+body.gelap {
+    --latar: #251b20;
+    --kartu: #35262e;
+    --teks: #fff0f5;
+    --teks-pudar: #d2b5c0;
+    --aksen: #f0a8c0;
+    --aksen-gelap: #f6c1d3;
+    --border: #60404e;
+    --footer: #35262e;
+}
+
+/* ===== 2. Dasar halaman ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    background: var(--latar);
+    color: var(--teks);
+
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== 3. Bagian atas / Header ===== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px 24px;
+    background: var(--kartu);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    margin: 0;
+    color: var(--aksen-gelap);
+}
+
+/* Tombol mode gelap / terang */
+#tombol-tema {
+    padding: 8px 16px;
+    border: 1px solid var(--aksen);
+    border-radius: 20px;
+
+    background: var(--latar);
+    color: var(--aksen-gelap);
+
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    transition: background 0.2s, color 0.2s;
+}
+
+#tombol-tema:hover {
+    background: var(--aksen);
+    color: #ffffff;
+}
+
+/* ===== 4. Isi halaman ===== */
+
+.isi {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 0 24px 50px;
+
+    /* Membantu footer tetap di bawah */
+    flex: 1;
+}
+
+/* Bagian perkenalan */
+.perkenalan {
+    padding: 50px 0 30px;
+}
+
+.perkenalan h1 {
+    font-size: 2.6rem;
+    margin: 0 0 8px;
+    color: var(--aksen-gelap);
+}
+
+.perkenalan p {
+    color: var(--teks-pudar);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Judul bagian proyek */
+.bagian-proyek > h2 {
+    margin-bottom: 6px;
+    color: var(--teks);
+}
+
+.bagian-proyek > p {
+    color: var(--teks-pudar);
+}
+
+/* ===== 5. Kotak pencarian ===== */
+
+#cari {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0 24px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    background: var(--kartu);
+    color: var(--teks);
+
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+#cari:focus {
+    border-color: var(--aksen);
+    box-shadow: 0 0 0 3px rgba(217, 130, 155, 0.18);
+}
+
+#cari::placeholder {
+    color: var(--teks-pudar);
+}
+
+/* ===== 6. Kartu proyek ===== */
+
+.daftar-proyek {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.kartu {
+    display: block;
+    padding: 24px;
+
+    background: var(--kartu);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow: 0 4px 14px rgba(130, 75, 95, 0.06);
+
+    color: inherit;
+    text-decoration: none;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kartu:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(130, 75, 95, 0.13);
+}
+
+.kartu h3 {
+    margin: 0 0 8px;
+    color: var(--aksen-gelap);
+}
+
+.kartu p {
+    margin: 0;
+    color: var(--teks-pudar);
+}
+
+/* ===== 7. Pesan proyek tidak ditemukan ===== */
+
+.pesan-kosong {
+    display: none;
+    color: var(--teks-pudar);
+    padding: 12px 0;
+}
+
+/* ===== 8. Footer ===== */
+
+.footer {
+    margin-top: auto;
+    padding: 20px 24px;
+
+    text-align: center;
+    background: var(--footer);
+    border-top: 1px solid var(--border);
+
+    color: var(--teks-pudar);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ===== 9. Tampilan HP ===== */
+
+@media (max-width: 600px) {
+    .header {
+        padding: 14px 16px;
+    }
+
+    .isi {
+        padding: 0 16px 36px;
+    }
+
+    .perkenalan {
+        padding: 36px 0 24px;
+    }
+
+    .perkenalan h1 {
+        font-size: 2rem;
+    }
+
+    .daftar-proyek {
+        grid-template-columns: 1fr;
+    }
+
+    .kartu {
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 18px 16px;
+    }
+}

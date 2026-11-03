@@ -1,244 +1,459 @@
 
-/* ===== 1. Warna ===== */
-/* Ubah warna cukup di bagian ini */
-
-:root {
-    --latar: #fff5f7;
-    --kartu: #ffffff;
-    --teks: #49363d;
-    --teks-pudar: #927780;
-    --aksen: #d9829b;
-    --aksen-gelap: #bd6681;
-    --border: #f1d6df;
-    --footer: #f8e2e9;
-}
-
-/* Warna saat mode gelap aktif */
-body.gelap {
-    --latar: #251b20;
-    --kartu: #35262e;
-    --teks: #fff0f5;
-    --teks-pudar: #d2b5c0;
-    --aksen: #f0a8c0;
-    --aksen-gelap: #f6c1d3;
-    --border: #60404e;
-    --footer: #35262e;
-}
-
-/* ===== 2. Dasar halaman ===== */
+/* =========================
+   RESET
+========================= */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-
-    background: var(--latar);
-    color: var(--teks);
-
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fc;
+    color: #252b3a;
     transition: background 0.3s, color 0.3s;
 }
 
-/* ===== 3. Bagian atas / Header ===== */
+
+/* =========================
+HEADER
+========================= */
 
 .header {
+    width: 100%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
-
-    padding: 16px 24px;
-    background: var(--kartu);
-    border-bottom: 1px solid var(--border);
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    margin: 0;
-    color: var(--aksen-gelap);
+    font-size: 25px;
+    font-weight: bold;
+    color: #253858;
 }
 
-/* Tombol mode gelap / terang */
+.logo span,
+.footer h3 span {
+    color: #6488d8;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555d70;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #6488d8;
+}
+
 #tombol-tema {
-    padding: 8px 16px;
-    border: 1px solid var(--aksen);
-    border-radius: 20px;
-
-    background: var(--latar);
-    color: var(--aksen-gelap);
-
+    background: #253858;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 0.9rem;
-
-    transition: background 0.2s, color 0.2s;
+    font-size: 13px;
+    transition: 0.3s;
 }
 
 #tombol-tema:hover {
-    background: var(--aksen);
-    color: #ffffff;
+    background: #496ba9;
 }
 
-/* ===== 4. Isi halaman ===== */
 
-.isi {
-    width: 100%;
-    max-width: 1000px;
+/* =========================
+   HERO SECTION
+========================= */
 
-    margin: 0 auto;
-    padding: 0 24px 50px;
-
-    /* Membantu footer tetap di bawah */
-    flex: 1;
+.hero {
+    padding: 100px 8%;
+    min-height: 470px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #e8efff, #f8f9fc);
 }
 
-/* Bagian perkenalan */
-.perkenalan {
-    padding: 50px 0 30px;
+.hero-content {
+    max-width: 600px;
 }
 
-.perkenalan h1 {
-    font-size: 2.6rem;
-    margin: 0 0 8px;
-    color: var(--aksen-gelap);
+.label {
+    display: inline-block;
+    color: #6488d8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
 }
 
-.perkenalan p {
-    color: var(--teks-pudar);
-    font-size: 1.1rem;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #253858;
+}
+
+.hero h1 span {
+    color: #6488d8;
+}
+
+.hero p {
+    color: #60697b;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #253858;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #496ba9;
+    transform: translateY(-3px);
+}
+
+
+/* HERO DECORATION */
+
+.hero-decoration {
+    width: 320px;
+    min-width: 260px;
+}
+
+.decoration-box {
+    background: #253858;
+    color: white;
+    padding: 45px 30px;
+    border-radius: 25px;
+    transform: rotate(3deg);
+    box-shadow: 0 15px 35px rgba(37, 56, 88, 0.2);
+}
+
+.decoration-box span {
+    color: #a9c5ff;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.decoration-box h2 {
+    font-size: 32px;
+    margin: 25px 0;
+    line-height: 1.3;
+}
+
+.decoration-box p {
+    color: #d4dfff;
     margin: 0;
 }
 
-/* Judul bagian proyek */
-.bagian-proyek > h2 {
-    margin-bottom: 6px;
-    color: var(--teks);
+
+/* =========================
+   DAFTAR PROYEK
+========================= */
+
+.container {
+    width: 84%;
+    max-width: 1200px;
+    margin: 80px auto;
 }
 
-.bagian-proyek > p {
-    color: var(--teks-pudar);
+.section-heading {
+    margin-bottom: 30px;
 }
 
-/* ===== 5. Kotak pencarian ===== */
+.section-heading h2 {
+    font-size: 32px;
+    color: #253858;
+    margin-bottom: 12px;
+}
 
-#cari {
-    width: 100%;
-    padding: 12px 16px;
-    margin: 8px 0 24px;
+.section-heading p {
+    color: #777f8e;
+    line-height: 1.7;
+}
 
-    border: 1px solid var(--border);
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 5px 18px;
+    border: 1px solid #e2e6ef;
     border-radius: 10px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
 
-    font-size: 1rem;
-    font-family: inherit;
-
-    background: var(--kartu);
-    color: var(--teks);
-
+.search-box input {
+    width: 100%;
+    padding: 13px 0;
+    border: none;
     outline: none;
-    transition: border 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+    background: transparent;
+    color: inherit;
 }
 
-#cari:focus {
-    border-color: var(--aksen);
-    box-shadow: 0 0 0 3px rgba(217, 130, 155, 0.18);
-}
 
-#cari::placeholder {
-    color: var(--teks-pudar);
-}
-
-/* ===== 6. Kartu proyek ===== */
+/* =========================
+   PROJECT CARDS
+========================= */
 
 .daftar-proyek {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .kartu {
-    display: block;
-    padding: 24px;
-
-    background: var(--kartu);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-
-    box-shadow: 0 4px 14px rgba(130, 75, 95, 0.06);
-
-    color: inherit;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #edf0f5;
     text-decoration: none;
-
-    transition: transform 0.2s, box-shadow 0.2s;
+    color: #252b3a;
+    min-height: 290px;
+    transition: 0.3s;
 }
 
 .kartu:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(130, 75, 95, 0.13);
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(37, 56, 88, 0.1);
+    border-color: #a9c5ff;
+}
+
+.kartu-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.nomor {
+    color: #6488d8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
 }
 
 .kartu h3 {
-    margin: 0 0 8px;
-    color: var(--aksen-gelap);
+    font-size: 19px;
+    color: #253858;
+    margin-bottom: 12px;
 }
 
 .kartu p {
-    margin: 0;
-    color: var(--teks-pudar);
+    color: #737b8a;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-/* ===== 7. Pesan proyek tidak ditemukan ===== */
+.open-link {
+    color: #6488d8;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: auto;
+}
 
-.pesan-kosong {
+
+/* =========================
+   PESAN KOSONG
+========================= */
+
+#pesan-kosong {
     display: none;
-    color: var(--teks-pudar);
-    padding: 12px 0;
+    text-align: center;
+    color: #d9534f;
+    padding: 30px;
 }
 
-/* ===== 8. Footer ===== */
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
-    margin-top: auto;
-    padding: 20px 24px;
-
+    background: #253858;
+    color: white;
+    padding: 35px 8%;
     text-align: center;
-    background: var(--footer);
-    border-top: 1px solid var(--border);
+}
 
-    color: var(--teks-pudar);
+.footer h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
 }
 
 .footer p {
-    margin: 0;
-    font-size: 0.9rem;
+    color: #d4dfff;
+    font-size: 13px;
+    margin-bottom: 15px;
 }
 
-/* ===== 9. Tampilan HP ===== */
+.footer a {
+    color: #a9c5ff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.gelap {
+    background: #171c29;
+    color: #f1f3f8;
+}
+
+body.gelap .header,
+body.gelap .kartu,
+body.gelap .search-box {
+    background: #242c3d;
+    color: white;
+    border-color: #343e53;
+}
+
+body.gelap .logo,
+body.gelap .section-heading h2,
+body.gelap .kartu h3 {
+    color: #d4dfff;
+}
+
+body.gelap nav a {
+    color: #d4dfff;
+}
+
+body.gelap .hero {
+    background: linear-gradient(135deg, #242c3d, #171c29);
+}
+
+body.gelap .hero h1 {
+    color: white;
+}
+
+body.gelap .hero p,
+body.gelap .section-heading p,
+body.gelap .kartu p {
+    color: #b9c1d1;
+}
+
+body.gelap .search-box input {
+    color: white;
+}
+
+body.gelap .search-box input::placeholder {
+    color: #b9c1d1;
+}
+
+
+/* =========================
+   RESPONSIVE / TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .daftar-proyek {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 80px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE / HP
+========================= */
 
 @media (max-width: 600px) {
+
     .header {
-        padding: 14px 16px;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    .isi {
-        padding: 0 16px 36px;
+    .logo {
+        font-size: 21px;
     }
 
-    .perkenalan {
-        padding: 36px 0 24px;
+    nav {
+        gap: 15px;
     }
 
-    .perkenalan h1 {
-        font-size: 2rem;
+    nav a {
+        font-size: 13px;
+    }
+
+    #tombol-tema {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-decoration {
+        width: 100%;
+    }
+
+    .container {
+        width: 86%;
+        margin: 60px auto;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
     }
 
     .daftar-proyek {
@@ -246,10 +461,7 @@ body {
     }
 
     .kartu {
-        padding: 20px;
+        min-height: 260px;
     }
 
-    .footer {
-        padding: 18px 16px;
-    }
 }

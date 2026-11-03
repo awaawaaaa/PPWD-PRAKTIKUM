@@ -1,8 +1,4 @@
 
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -14,208 +10,126 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8f9fc;
-    color: #252b3a;
-    transition: background 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+    background: #fff8fa;
+    color: #49313d;
+    transition: 0.3s;
 }
 
-
-/* =========================
-HEADER
-========================= */
+/* HEADER */
 
 .header {
-    width: 100%;
-    padding: 20px 8%;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(180, 100, 130, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #253858;
+    font-size: 23px;
+    color: #49313d;
 }
 
 .logo span,
-.footer h3 span {
-    color: #6488d8;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #555d70;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #6488d8;
+.footer h2 span {
+    color: #e879a0;
 }
 
 #tombol-tema {
-    background: #253858;
+    padding: 11px 17px;
+    background: #f5a3bd;
     color: white;
     border: none;
-    padding: 11px 16px;
-    border-radius: 8px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 13px;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-#tombol-tema:hover {
-    background: #496ba9;
-}
+/* PERKENALAN */
 
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero {
-    padding: 100px 8%;
-    min-height: 470px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    background: linear-gradient(135deg, #e8efff, #f8f9fc);
-}
-
-.hero-content {
-    max-width: 600px;
+.perkenalan {
+    padding: 100px 10%;
+    min-height: 390px;
+    background: linear-gradient(120deg, #ffe0e9, #fff2f5);
 }
 
 .label {
     display: inline-block;
-    color: #6488d8;
+    color: #d65d87;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    font-size: 48px;
     margin-bottom: 20px;
-    color: #253858;
 }
 
-.hero h1 span {
-    color: #6488d8;
+.perkenalan h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #513444;
 }
 
-.hero p {
-    color: #60697b;
+.perkenalan p {
+    max-width: 570px;
     line-height: 1.8;
-    margin-bottom: 30px;
-    font-size: 16px;
+    color: #795d6c;
+    margin-bottom: 28px;
 }
 
 .btn {
     display: inline-block;
-    text-decoration: none;
-    background: #253858;
+    padding: 13px 23px;
+    background: #e879a0;
     color: white;
-    padding: 14px 25px;
-    border-radius: 8px;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #496ba9;
+    background: #cf5f89;
     transform: translateY(-3px);
 }
 
+/* BAGIAN PROYEK */
 
-/* HERO DECORATION */
-
-.hero-decoration {
-    width: 320px;
-    min-width: 260px;
-}
-
-.decoration-box {
-    background: #253858;
-    color: white;
-    padding: 45px 30px;
-    border-radius: 25px;
-    transform: rotate(3deg);
-    box-shadow: 0 15px 35px rgba(37, 56, 88, 0.2);
-}
-
-.decoration-box span {
-    color: #a9c5ff;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.decoration-box h2 {
-    font-size: 32px;
-    margin: 25px 0;
-    line-height: 1.3;
-}
-
-.decoration-box p {
-    color: #d4dfff;
-    margin: 0;
-}
-
-
-/* =========================
-   DAFTAR PROYEK
-========================= */
-
-.container {
+.bagian-proyek {
     width: 84%;
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 75px auto;
 }
 
-.section-heading {
-    margin-bottom: 30px;
+.judul-proyek {
+    margin-bottom: 28px;
 }
 
-.section-heading h2 {
+.judul-proyek h2 {
     font-size: 32px;
-    color: #253858;
     margin-bottom: 12px;
 }
 
-.section-heading p {
-    color: #777f8e;
+.judul-proyek p {
+    color: #896f7c;
     line-height: 1.7;
 }
 
-
-/* =========================
-   SEARCH BOX
-========================= */
+/* SEARCH */
 
 .search-box {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: white;
-    padding: 5px 18px;
-    border: 1px solid #e2e6ef;
-    border-radius: 10px;
-    margin-bottom: 30px;
     max-width: 500px;
+    padding: 5px 18px;
+    background: white;
+    border: 1px solid #f1d5df;
+    border-radius: 12px;
+    margin-bottom: 30px;
 }
 
 .search-box input {
@@ -223,155 +137,141 @@ nav a:hover {
     padding: 13px 0;
     border: none;
     outline: none;
-    font-size: 14px;
     background: transparent;
+    font-size: 14px;
     color: inherit;
 }
 
-
-/* =========================
-   PROJECT CARDS
-========================= */
+/* GRID PROYEK */
 
 .daftar-proyek {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 24px;
 }
 
 .kartu {
+    position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 265px;
+    padding: 27px;
     background: white;
-    padding: 28px;
-    border-radius: 15px;
-    border: 1px solid #edf0f5;
+    border: 1px solid #f5dce5;
+    border-radius: 18px;
     text-decoration: none;
-    color: #252b3a;
-    min-height: 290px;
+    color: #49313d;
     transition: 0.3s;
 }
 
 .kartu:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 30px rgba(37, 56, 88, 0.1);
-    border-color: #a9c5ff;
+    box-shadow: 0 12px 28px rgba(211, 112, 150, 0.15);
+    border-color: #efa2bd;
 }
 
-.kartu-icon {
-    font-size: 32px;
-    margin-bottom: 20px;
+.ikon {
+    font-size: 35px;
+    margin-bottom: 22px;
 }
 
 .nomor {
-    color: #6488d8;
-    font-size: 11px;
+    position: absolute;
+    top: 28px;
+    right: 27px;
+    color: #d7a9ba;
+    font-size: 13px;
     font-weight: bold;
-    letter-spacing: 1.5px;
-    margin-bottom: 12px;
 }
 
 .kartu h3 {
-    font-size: 19px;
-    color: #253858;
+    font-size: 18px;
     margin-bottom: 12px;
 }
 
 .kartu p {
-    color: #737b8a;
     font-size: 14px;
     line-height: 1.7;
+    color: #927b87;
     margin-bottom: 20px;
 }
 
-.open-link {
-    color: #6488d8;
+.link-proyek {
+    color: #d65d87;
     font-size: 14px;
     font-weight: bold;
     margin-top: auto;
 }
 
-
-/* =========================
-   PESAN KOSONG
-========================= */
+/* PESAN PENCARIAN */
 
 #pesan-kosong {
     display: none;
     text-align: center;
-    color: #d9534f;
+    color: #d65d87;
     padding: 30px;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer {
-    background: #253858;
-    color: white;
-    padding: 35px 8%;
+    padding: 40px 20px;
     text-align: center;
+    background: #513444;
+    color: white;
 }
 
-.footer h3 {
-    font-size: 25px;
+.footer h2 {
     margin-bottom: 12px;
 }
 
+.footer h2 span {
+    color: #f5a3bd;
+}
+
 .footer p {
-    color: #d4dfff;
-    font-size: 13px;
-    margin-bottom: 15px;
+    color: #f4dce5;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-.footer a {
-    color: #a9c5ff;
-    text-decoration: none;
-    font-size: 13px;
+.footer .copyright {
+    font-size: 12px;
+    color: #d8b9c7;
 }
 
-
-/* =========================
-   DARK MODE
-========================= */
+/* DARK MODE */
 
 body.gelap {
-    background: #171c29;
-    color: #f1f3f8;
+    background: #211a20;
+    color: #fff0f5;
 }
 
 body.gelap .header,
 body.gelap .kartu,
 body.gelap .search-box {
-    background: #242c3d;
-    color: white;
-    border-color: #343e53;
+    background: #332630;
+    border-color: #59404f;
+    color: #fff0f5;
 }
 
 body.gelap .logo,
-body.gelap .section-heading h2,
 body.gelap .kartu h3 {
-    color: #d4dfff;
+    color: #ffe0eb;
 }
 
-body.gelap nav a {
-    color: #d4dfff;
+body.gelap .perkenalan {
+    background: linear-gradient(120deg, #3c2936, #211a20);
 }
 
-body.gelap .hero {
-    background: linear-gradient(135deg, #242c3d, #171c29);
+body.gelap .perkenalan h1 {
+    color: #ffe0eb;
 }
 
-body.gelap .hero h1 {
-    color: white;
-}
-
-body.gelap .hero p,
-body.gelap .section-heading p,
+body.gelap .perkenalan p,
+body.gelap .judul-proyek p,
 body.gelap .kartu p {
-    color: #b9c1d1;
+    color: #d4b9c7;
 }
 
 body.gelap .search-box input {
@@ -379,89 +279,44 @@ body.gelap .search-box input {
 }
 
 body.gelap .search-box input::placeholder {
-    color: #b9c1d1;
+    color: #c8aab8;
 }
 
+/* RESPONSIVE */
 
-/* =========================
-   RESPONSIVE / TABLET
-========================= */
-
-@media (max-width: 900px) {
-
+@media (max-width: 850px) {
     .daftar-proyek {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .hero {
-        padding: 80px 7%;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
 }
 
-
-/* =========================
-   RESPONSIVE / HP
-========================= */
-
 @media (max-width: 600px) {
-
     .header {
         padding: 18px 5%;
-        flex-wrap: wrap;
-        gap: 15px;
     }
 
     .logo {
-        font-size: 21px;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 13px;
+        font-size: 19px;
     }
 
     #tombol-tema {
-        padding: 9px 11px;
         font-size: 11px;
+        padding: 10px 12px;
     }
 
-    .hero {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 65px 7%;
+    .perkenalan {
+        padding: 75px 7%;
     }
 
-    .hero h1 {
+    .perkenalan h1 {
         font-size: 34px;
     }
 
-    .hero-decoration {
-        width: 100%;
-    }
-
-    .container {
+    .bagian-proyek {
         width: 86%;
-        margin: 60px auto;
-    }
-
-    .section-heading h2 {
-        font-size: 27px;
     }
 
     .daftar-proyek {
         grid-template-columns: 1fr;
     }
-
-    .kartu {
-        min-height: 260px;
-    }
-
 }
